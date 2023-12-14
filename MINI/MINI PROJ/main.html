@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMagic</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+       
+        
+        
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1 style="font-family: 'Comfortaa', sans-serif;">MovieMagic &nbsp  </h1> 
+    
+            <form action="/search" method="get">
+            <button type="submit"><i class="fas fa-search"><input type="search" id="search" name="q" id placeholder="Search for Movies,Shows,Events..."></i></button>  
+        </div>  
+        <select name="Event" class="event-select" >
+            <option selected disabled>Select City</option>
+            <option>Bangalore</option>
+            <option>Delhi</option>
+            <option>Mumbai</option>
+            <option>Kolkata</option>
+            </select>  
+        
+        <script>
+            function bookEvent(eventName) {
+                alert(`Booking confirmed for ${eventName}`);
+                // Additional logic for booking processing can be added here
+            }
+        </script>
+        <button id="signInBtn" onclick="openPopup()">Sign In</button>
+    
+        <div class="overlay" id="overlay" onclick="closePopup()"></div>
+    
+        <div class="popup-container" id="popup">
+            <div class="close-btn" onclick="closePopup()">X</div>
+            <h2>Sign In</h2>
+            <form>
+                <!-- Your sign-in form goes here -->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <input type="submit" value="Sign In">
+            </form>
+        </div>
+    
+        <script>
+            function openPopup() {
+                document.getElementById("popup").style.display = "block";
+                document.getElementById("overlay").style.display = "block";
+            }
+    
+            function closePopup() {
+                document.getElementById("popup").style.display = "none";
+                document.getElementById("overlay").style.display = "none";
+            }
+        </script>
+        </form>
+    </header>
+
+    <div class="slideshow-container">
+        
+        <div class="slide fade">
+            <img id="js-promotion-banner" loading="lazy" onclick="handleBannerClick(event)" src="pics/1701500752835_webb.avif" alt="promotion-banner" height="400">
+        </div>
+        <div class="slide fade">
+            <img id="js-promotion-banner" loading="lazy" onclick="handleBannerClick(event)" src="pics/1701841057029_gauravgupta1240x300.avif" alt="promotion-banner" height="400">
+        </div>
+        <div class="slide fade">
+            <img id="js-promotion-banner" loading="lazy" onclick="handleBannerClick(event)" src="pics/abc.avif" alt="promotion-banner" height="400">
+        </div>
+        
+        <div class="slide fade">
+            <img id="js-promotion-banner" loading="lazy" onclick="handleBannerClick(event)" src="photos/aq.webp" alt="promotion-banner" height="400">
+        </div>
+        
+      
+       
+        
+         
+        <!-- Add more slides as needed -->
+        <!-- Add this div for slide count dots -->
+        <div class="slide-count-container">
+            <!-- Dots will be added dynamically here -->
+        </div>
+
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+    </div>
+
+    <div class="movie-list-container">
+        <h1 class="movie-list-title"> NEW RELEASES</h1>
+        <div class="movie-list-wrapper">
+            <div class="movie-list">
+
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/sapta.avif" alt="">
+                    <span class="movie-list-item-title">Saptha Sagaradache Ello</span>
+                    <a class="movie-list-item-button" href="sapta.html">view</a>                    
+
+                </div><div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/aqua.webp" alt="">
+                    <span class="movie-list-item-title">Aquaman 2</span>
+                    <a class="movie-list-item-button" href="aquaman.html">view</a>                    
+
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/wonk.jpeg" alt="">
+                    <span class="movie-list-item-title">Wonka</span>
+                    <a class="movie-list-item-button" href="wonka.html">view</a>                    
+
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/ani.jpg" alt="">
+                    <span class="movie-list-item-title">Animal</span>
+                    <a class="movie-list-item-button" href="Animal.html">view</a>                    
+
+                </div>
+                
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/swift.webp" alt="">
+                    <span class="movie-list-item-title"> Taylor Swift: The Eras Tour</span>
+                    <a class="movie-list-item-button" href="Taylor.html">view</a>                    
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/dunki.jpg" alt="">
+                    <span class="movie-list-item-title">Danki</span>
+                    <a class="movie-list-item-button" href="dunki.html">view</a>                    
+                </div>
+               
+                
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/tiger1.avif" alt="">
+                    <span class="movie-list-item-title">Tiger 3</span>
+                    <a class="movie-list-item-button" href="Tiger.html">view</a>                    
+
+                </div>
+                
+                
+                
+            </div>
+            <i class="fas fa-chevron-right arrow"></i>
+        </div>
+    </div>
+    <div class="movie-list-container">
+        <h1 class="movie-list-title">RECOMMENDED MOVIES</h1>
+        <div class="movie-list-wrapper">
+            <div class="movie-list">
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/opp.jpeg" alt="">
+                    <span class="movie-list-item-title">Oppenheimer</span>
+                    <a class="movie-list-item-button" href="opp.html">view</a>                    
+
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/barbie.jpeg" alt="">
+                    <span class="movie-list-item-title">Barbie</span>
+                    <a class="movie-list-item-button" href="barbie.html">view</a>                    
+
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/rrr.jpeg" alt="">
+                    <span class="movie-list-item-title">RRR</span>
+                    <a class="movie-list-item-button" href="rrr.html">view</a>                    
+
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/rocky.jpeg" alt="">
+                    <span class="movie-list-item-title">Rocky Aur Rani Kii Prem Kahaani
+                    </span>
+                    <a class="movie-list-item-button" href="rocky.html">view</a>                    
+
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/avg.jpg" alt="">
+                    <span class="movie-list-item-title">Avengers: Infinity War</span>
+                    <a class="movie-list-item-button" href="infinity.html">view</a>                    
+
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/end.jpg" alt="">
+                    <span class="movie-list-item-title">Avengers: Endgame
+                    </span>
+                    <a class="movie-list-item-button" href="end.html">view</a>                    
+
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/ava.webp" alt="">
+                    <span class="movie-list-item-title">Avatar: The Way of Water
+                    </span>
+                    <a class="movie-list-item-button" href="avatar.html">view</a>                    
+
+                </div>
+            </div>
+            <i class="fas fa-chevron-right arrow"></i>
+        </div>
+    </div>
+    <div class="featured-content"
+        style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('photos/f-2.jpg');">
+        <img class="featured-title" src="photos/f-t-2.png" alt="">
+        <p class="featured-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto illo dolor
+            deserunt nam assumenda ipsa eligendi dolore, ipsum id fugiat quo enim impedit, laboriosam omnis
+            minima voluptatibus incidunt. Accusamus, provident.</p>
+            <a class="featured-button" href="dark.html">view</a>
+    </div>
+    <div class="movie-list-container">
+        <h1 class="movie-list-title">COMING SOON</h1>
+        <div class="movie-list-wrapper">
+            <div class="movie-list">
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/dedpool1.jpg" alt="">
+                    <span class="movie-list-item-title">Deadpool 3</span>
+                    <a class="movie-list-item-button" href="deadpool.html">view</a>                    
+
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/pushpa.webp" alt="">
+                    <span class="movie-list-item-title">Pushpa 2</span>
+                    <a class="movie-list-item-button" href="Pushpa.html">view</a>                    
+
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/panda.webp" alt="">
+                    <span class="movie-list-item-title">Kung Fu Panda 4</span>
+                    <a class="movie-list-item-button" href="panda.html">view</a>                    
+
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/jungle.jpg" alt="">
+                    <span class="movie-list-item-title">Welcome To The Jungle</span>
+                    <a class="movie-list-item-button" href="jungle.html">view</a>                    
+
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/boys.jpeg" alt="">
+                    <span class="movie-list-item-title">Untitled fourth Bad Boys film</span>
+                    <a class="movie-list-item-button" href="boys.html">view</a>                    
+
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/zilla.jpeg" alt="">
+                    <span class="movie-list-item-title">Godzilla x Kong: The New Empire</span>
+                    <a class="movie-list-item-button" href="zilla.html">view</a>                    
+
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="photos/race.avif" alt="">
+                    <span class="movie-list-item-title">Race for Glory: Audi vs. Lancia</span>
+                    <a class="movie-list-item-button" href="race.html">view</a>                    
+
+                </div>
+            </div>
+            <i class="fas fa-chevron-right arrow"></i>
+        </div>
+    </div>
+    <div class="movie-list-container">
+      <!-- <h1 class="movie-list-title">NEW RELEASES</h1>
+        <div class="movie-list-wrapper">
+            <div class="movie-list">
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="img/17.jpg" alt="">
+                    <span class="movie-list-item-title">Her</span>
+                    <a class="movie-list-item-button" href="#">view</a>                    
+
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="img/18.jpg" alt="">
+                    <span class="movie-list-item-title">Her</span>
+                    <a class="movie-list-item-button" href="#">view</a>                    
+
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="img/19.jpg" alt="">
+                    <span class="movie-list-item-title">Her</span>
+                    <a class="movie-list-item-button" href="#">view</a>                    
+
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="img/7.jpg" alt="">
+                    <span class="movie-list-item-title">Her</span>
+                    <a class="movie-list-item-button" href="#">view</a>                    
+
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="img/1.jpg" alt="">
+                    <span class="movie-list-item-title">Her</span>
+                    <a class="movie-list-item-button" href="#">view</a>                    
+
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="img/1.jpg" alt="">
+                    <span class="movie-list-item-title">Her</span>
+                    <a class="movie-list-item-button" href="#">view</a>                    
+
+                </div>
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="img/1.jpg" alt="">
+                    <span class="movie-list-item-title">Her</span>
+                    <a class="movie-list-item-button" href="#">view</a>                    
+
+                </div>
+            </div>
+            <i class="fas fa-chevron-right arrow"></i>
+        </div>--> 
+    </div>
+</div>
+</div>
+
+                <i class="fas fa-chevron-right arrow"></i>
+
+                <footer>
+                    <div class="footer-content">
+                        <p>&copy; 2023 MovieMagic. All rights reserved.</p>
+                        <ul class="footer-links">
+                            <li><a href="policy.html">Privacy Policy</a></li>
+                            <li><a href="policy.html">Terms of Service</a></li>
+                            <li><a href="policy.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </footer>
+    
+<script src="script1.js"></script>
+
+</body>
+</html>
